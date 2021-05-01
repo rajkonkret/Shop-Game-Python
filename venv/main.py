@@ -14,12 +14,20 @@ class Application(tk.Frame):
         self.hi_there["command"] = self.say_hi
         self.hi_there.pack(side="top")
 
+        self.hi_there = tk.Button(self)
+        self.hi_there["text"] = "Dane\n"
+        self.hi_there["command"] = self.data_mag
+        self.hi_there.pack(side="top")
+
         self.quit = tk.Button(self, text="QUIT", fg="red",
                               command=self.master.destroy)
         self.quit.pack(side="bottom")
 
     def say_hi(self):
         print("hi there, everyone!")
+
+    def data_mag(self):
+        print("dane magazynowe")
 
 
 root = tk.Tk()
